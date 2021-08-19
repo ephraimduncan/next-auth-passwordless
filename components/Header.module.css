@@ -1,0 +1,15 @@
+.navItems {
+  display: flex;
+  padding: 0;
+  list-style: none;
+}
+
+.navItem {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.navItem:hover {
+  text-decoration: underline;
+  color: #0070f3;
+}
