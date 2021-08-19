@@ -1,4 +1,4 @@
-import { signIn, signOut, useSession } from "next-auth/client";
+import { useSession } from "next-auth/client";
 import Layout from "../components/Layout";
 import styles from "../styles/Home.module.css";
 
