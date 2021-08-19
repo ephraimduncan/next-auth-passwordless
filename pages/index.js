@@ -1,5 +1,5 @@
 import { signIn, signOut, useSession } from "next-auth/client";
-import Laypout from "../components/Laypout";
+import Layout from "../components/Layout";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -8,7 +8,7 @@ export default function Home() {
   console.log(session);
 
   return (
-    <Laypout>
+    <Layout>
       <p className={styles.description}>
         {!loading && !session && (
           <>
@@ -30,6 +30,6 @@ export default function Home() {
           </>
         )}
       </p>
-    </Laypout>
+    </Layout>
   );
 }
