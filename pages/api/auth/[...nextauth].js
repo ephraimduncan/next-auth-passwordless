@@ -21,6 +21,11 @@ export default NextAuth({
       server: process.env.EMAIL_SERVER,
       from: process.env.EMAIL_FROM,
     }),
+
+    Providers.GitHub({
+      clientId: process.env.GITHUB_CLIENT_ID,
+      clientSecret: process.env.GITHUB_CLIENT_SECRET,
+    }),
   ],
   adapter: FaunaAdapter({ faunaClient: client }),
 });

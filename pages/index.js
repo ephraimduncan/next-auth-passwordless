@@ -5,12 +5,10 @@ import styles from "../styles/Home.module.css";
 export default function Home() {
   const [session, loading] = useSession();
 
-  console.log(session);
-
   return (
     <Layout>
       <p className={styles.description}>
-        {!loading && !session && (
+        {!session && (
           <>
             <p>Get started by sigining in. </p>
             <button className={styles.code} onClick={() => signIn()}>
@@ -18,11 +16,13 @@ export default function Home() {
             </button>
           </>
         )}
-        {session && !loading && (
+        {session && (
           <>
             <p>
               Signed in as{" "}
-              <span className={styles.p}>{session.user.email}</span>
+              <span className={styles.p}>
+                {session.user.email || session.user.name}
+              </span>
             </p>
             <button className={styles.code} onClick={() => signOut()}>
               Sign out
