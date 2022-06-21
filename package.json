@@ -12,7 +12,7 @@
     "@next-auth/fauna-adapter": "^0.2.2",
     "faunadb": "^4.3.0",
     "next": "11.1.0",
-    "next-auth": "^3.28.0",
+    "next-auth": "^3.29.5",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
